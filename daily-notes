@@ -2,3 +2,8 @@
 
 User Register, and Create and Admin.
 Installed Packages: npm i bcrypt, and npm i express-validator
+
+19-2-2024:
+
+User Login with JWT Token.
+Installed Packages: npm i jsonwebtoken
