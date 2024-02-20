@@ -9,4 +9,5 @@ User Login with JWT Token.
 Installed Packages: npm i jsonwebtoken
 
 20-02-2024:
+
 Worked on the permission model. and create add permission API for Admin.
