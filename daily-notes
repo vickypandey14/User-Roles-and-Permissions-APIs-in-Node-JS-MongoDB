@@ -1,9 +1,12 @@
-18-2-2024: 
+18-02-2024: 
 
 User Register, and Create and Admin.
 Installed Packages: npm i bcrypt, and npm i express-validator
 
-19-2-2024:
+19-02-2024:
 
 User Login with JWT Token.
 Installed Packages: npm i jsonwebtoken
+
+20-02-2024:
+Worked on the permission model. and create add permission API for Admin.
