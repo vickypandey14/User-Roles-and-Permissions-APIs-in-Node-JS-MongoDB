@@ -18,7 +18,7 @@ const addPermission = async(req, res) => {
 
         const { permission_name } = req.body;
 
-        const isExists = Permission.findOne({ permission_name });
+        const isExists = await Permission.findOne({ permission_name });
 
         if (isExists) {
             return res.status(400).json({
