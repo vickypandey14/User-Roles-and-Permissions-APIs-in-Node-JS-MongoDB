@@ -22,4 +22,5 @@ Worked on the Create Read, Delete, and Update Permission API
 
 24-02-2024:
 
-Working On Only Admin can access Permissions APIs Part.
+Working On Only Admin can access Permissons APIs by using Middleware Part.
+New Middleware Created: adminMiddleware.js
