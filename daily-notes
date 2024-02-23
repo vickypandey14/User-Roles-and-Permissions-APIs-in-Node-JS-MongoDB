@@ -16,6 +16,10 @@ Worked on the permission model. and create add permission API for Admin.
 
 Creating the Auth Middleware & working on the Profile API
 
-22-02-2024:
+23-02-2024:
 
-Working on the Create Read, Delete, and Update Permission API
+Worked on the Create Read, Delete, and Update Permission API
+
+24-02-2024:
+
+Working On Only Admin can access Permissions APIs Part.
