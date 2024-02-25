@@ -5,6 +5,8 @@ const auth = require('../middlewares/authMiddleware');
 
 const permissionController = require('../controllers/admin/permissionController');
 
+const { OnlyAdminCanAccess } = require('../middlewares/adminMiddleware');
+
 const { permissionAddValidator, permissionDeleteValidator, permissionUpdateValidator } = require('../helpers/adminValidator');
 
 // Authenticated Routes Starts Here (authorization token needed) -----------
@@ -12,7 +14,7 @@ const { permissionAddValidator, permissionDeleteValidator, permissionUpdateValid
 // Permissions Routes
 
 router.post('/add-permission', auth, permissionAddValidator, permissionController.addPermission);
-router.get('/get-permissions', auth, permissionController.getPermission);
+router.get('/get-permissions', auth, OnlyAdminCanAccess, permissionController.getPermission);
 router.post('/delete-permission', auth, permissionDeleteValidator, permissionController.deletePermission);
 router.post('/update-permission', auth, permissionUpdateValidator, permissionController.updatePermission);
 
