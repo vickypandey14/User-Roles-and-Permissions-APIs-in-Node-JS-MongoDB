@@ -13,9 +13,9 @@ const { permissionAddValidator, permissionDeleteValidator, permissionUpdateValid
 
 // Permissions Routes
 
-router.post('/add-permission', auth, permissionAddValidator, permissionController.addPermission);
+router.post('/add-permission', auth, OnlyAdminCanAccess, permissionAddValidator, permissionController.addPermission);
 router.get('/get-permissions', auth, OnlyAdminCanAccess, permissionController.getPermission);
-router.post('/delete-permission', auth, permissionDeleteValidator, permissionController.deletePermission);
-router.post('/update-permission', auth, permissionUpdateValidator, permissionController.updatePermission);
+router.post('/delete-permission', auth, OnlyAdminCanAccess, permissionDeleteValidator, permissionController.deletePermission);
+router.post('/update-permission', auth, OnlyAdminCanAccess, permissionUpdateValidator, permissionController.updatePermission);
 
 module.exports = router;
