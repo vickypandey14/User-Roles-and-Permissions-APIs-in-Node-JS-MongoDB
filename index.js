@@ -26,11 +26,15 @@ app.use(express.static('public'));
 const authRoute = require('./routes/authRoute');
 app.use('/api', authRoute);
 
-
 // admin routes
 
 const adminRoute = require('./routes/adminRoute');
 app.use('/api/admin', adminRoute);
+
+// common routes
+
+const commonRoute = require('./routes/commonRoute');
+app.use('/api', commonRoute);
 
 const port = process.env.SERVER_PORT || 3000;
 
