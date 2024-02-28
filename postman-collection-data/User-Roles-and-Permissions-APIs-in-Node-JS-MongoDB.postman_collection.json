@@ -173,7 +173,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDg3MDY3ODcsImV4cCI6MTcwODc5MzE4N30.JHrd3CWwmZhC9pxEDpBca0xYUVshRTCeO3broLD8DTc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDg4ODM0NDYsImV4cCI6MTcwODk2OTg0Nn0.jKF_q2qAGI_yCJ511NY-cOoH4WxW8yIfS6xTQizBXpA",
 							"type": "string"
 						}
 					]
@@ -207,7 +207,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDg3MDY3ODcsImV4cCI6MTcwODc5MzE4N30.JHrd3CWwmZhC9pxEDpBca0xYUVshRTCeO3broLD8DTc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDg4ODM3NjksImV4cCI6MTcwODk3MDE2OX0.RBqbVN8SyZs_wgcAzEhn1zWsXMb4zEvtOcxBzGC1ydE",
 							"type": "string"
 						}
 					]
@@ -280,6 +280,135 @@
 						"api",
 						"admin",
 						"delete-permission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkxNDAxMjgsImV4cCI6MTcwOTIyNjUyOH0.p9krdAwyQsLhdp8g3meGyoteh_6uuJFmko86LfOjLfU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_name\": \"Laravel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/add-category",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"add-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkxNDA3OTMsImV4cCI6MTcwOTIyNzE5M30.tjOwQan3yjEydDbwYhBKDMNzH2s_ubghuAO9oUv9S6A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/get-categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"get-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkxNDA3OTMsImV4cCI6MTcwOTIyNzE5M30.tjOwQan3yjEydDbwYhBKDMNzH2s_ubghuAO9oUv9S6A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"65df6f12ba179837f3b11846\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/delete-category",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"delete-category"
 					]
 				}
 			},
