@@ -56,6 +56,79 @@ const addCategory = async(req, res) => {
 
 };
 
+// Get Categories API Method
+
+const getCategories = async(req, res) => {
+
+    try {
+
+        const categories = await Category.find({});
+
+        return res.status(200).json({
+            success: true,
+            msg: 'All Categories Data Fetched Successfully!',
+            data: categories
+        });
+        
+    } catch (error) 
+    {
+        return res.status(400).json({
+            success: false,
+            msg: error.message,
+        });
+    }
+
+}
+
+// Delete Categories API Method
+
+
+const deleteCategory = async(req, res) => {
+
+    try {
+
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(200).json({
+                success: false,
+                msg: 'Errors',
+                errors: errors.array()
+            });
+        }
+
+        const { id } = req.body;
+
+        const categoryData = Category.findOne({ _id:id });
+
+        if (!categoryData) {
+            return res.status(400).json({
+                success: false,
+                msg: 'This Category ID does not exist!',
+            });
+        }
+
+        await Category.findByIdAndDelete({ _id:id });
+
+        return res.status(200).json({
+            success: true,
+            msg: 'Category Deleted Successfully!'
+        });
+        
+    } catch (error) 
+    {
+        return res.status(400).json({
+            success: false,
+            msg: error.message,
+        });
+    }
+
+}
+
+
+
 module.exports = {
-    addCategory
+    addCategory,
+    getCategories,
+    deleteCategory
 };
