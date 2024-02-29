@@ -20,3 +20,8 @@ exports.addCategoryValidator = [
 exports.categoryDeleteValidator = [
     check('id', 'The Category ID is required.').not().isEmpty(),
 ];
+
+exports.updateCategoryValidator = [
+    check('id', 'The Category ID is required.').not().isEmpty(),
+    check('category_name', 'The Category Name is required.').not().isEmpty(),
+];

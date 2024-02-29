@@ -83,7 +83,47 @@ const getCategories = async(req, res) => {
 // Delete Categories API Method
 
 
-const deleteCategory = async(req, res) => {
+const deleteCategory = async (req, res) => {
+    try {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(200).json({
+                success: false,
+                msg: 'Errors',
+                errors: errors.array()
+            });
+        }
+
+        const { id } = req.body;
+
+        const categoryData = await Category.findOne({ _id: id });
+
+        if (!categoryData) {
+            return res.status(400).json({
+                success: false,
+                msg: 'This Category ID does not exist!',
+            });
+        }
+
+        await Category.findByIdAndDelete(id);
+
+        return res.status(200).json({
+            success: true,
+            msg: 'Category Deleted Successfully!'
+        });
+    } catch (error) {
+        return res.status(400).json({
+            success: false,
+            msg: error.message,
+        });
+    }
+}
+
+
+// Update Category API Method
+
+const updateCategory = async (req, res) => {
 
     try {
 
@@ -97,38 +137,53 @@ const deleteCategory = async(req, res) => {
             });
         }
 
-        const { id } = req.body;
+        const { id, category_name } = req.body;
 
-        const categoryData = Category.findOne({ _id:id });
+        const existingCategory = await Category.findOne({ name: category_name });
+        
+        if (existingCategory && existingCategory._id.toString() !== id) {
+            return res.status(400).json({
+                success: false,
+                msg: 'Category with this name already exists!',
+            });
+        }
 
-        if (!categoryData) {
+        const categoryUpdatedData = await Category.findByIdAndUpdate(
+            id,
+            {
+                $set: {
+                    name: category_name
+                }
+            },
+            { new: true }
+        );
+
+        if (!categoryUpdatedData) {
             return res.status(400).json({
                 success: false,
                 msg: 'This Category ID does not exist!',
             });
         }
 
-        await Category.findByIdAndDelete({ _id:id });
-
         return res.status(200).json({
             success: true,
-            msg: 'Category Deleted Successfully!'
+            msg: 'Category Data Updated Successfully!',
+            data: categoryUpdatedData
         });
-        
-    } catch (error) 
-    {
+
+    } catch (error) {
         return res.status(400).json({
             success: false,
             msg: error.message,
         });
     }
 
-}
-
+};
 
 
 module.exports = {
     addCategory,
     getCategories,
-    deleteCategory
+    deleteCategory,
+    updateCategory
 };
