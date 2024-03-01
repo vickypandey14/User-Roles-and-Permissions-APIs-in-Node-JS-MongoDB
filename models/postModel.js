@@ -10,10 +10,11 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    categories: {
-        type: Array,
+    categories: [{
+        type: mongooose.Schema.Types.ObjectID,
+        ref:'Category',
         required: false
-    },
+    }],
 
 });
 

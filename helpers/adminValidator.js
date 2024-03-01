@@ -25,3 +25,8 @@ exports.updateCategoryValidator = [
     check('id', 'The Category ID is required.').not().isEmpty(),
     check('category_name', 'The Category Name is required.').not().isEmpty(),
 ];
+
+exports.createPostValidator = [
+    check('title', 'The Post Title is required.').not().isEmpty(),
+    check('description', 'The Post Description is required.').not().isEmpty(),
+];
