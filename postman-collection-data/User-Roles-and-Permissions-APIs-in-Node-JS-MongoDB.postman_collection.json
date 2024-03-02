@@ -293,7 +293,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkxNDAxMjgsImV4cCI6MTcwOTIyNjUyOH0.p9krdAwyQsLhdp8g3meGyoteh_6uuJFmko86LfOjLfU",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkyMjgwMDksImV4cCI6MTcwOTMxNDQwOX0.UJBDLO8pdx4Zaoy5TMptU9YyC-D58a8ZPX90e3zb9GI",
 							"type": "string"
 						}
 					]
@@ -302,7 +302,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"category_name\": \"Laravel\"\r\n}",
+					"raw": "{\r\n    \"category_name\": \"PHP\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -338,7 +338,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkxNDA3OTMsImV4cCI6MTcwOTIyNzE5M30.tjOwQan3yjEydDbwYhBKDMNzH2s_ubghuAO9oUv9S6A",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkyMjgwMDksImV4cCI6MTcwOTMxNDQwOX0.UJBDLO8pdx4Zaoy5TMptU9YyC-D58a8ZPX90e3zb9GI",
 							"type": "string"
 						}
 					]
@@ -380,7 +380,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkxNDA3OTMsImV4cCI6MTcwOTIyNzE5M30.tjOwQan3yjEydDbwYhBKDMNzH2s_ubghuAO9oUv9S6A",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkyMjgwMDksImV4cCI6MTcwOTMxNDQwOX0.UJBDLO8pdx4Zaoy5TMptU9YyC-D58a8ZPX90e3zb9GI",
 							"type": "string"
 						}
 					]
@@ -389,7 +389,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":\"65df6f12ba179837f3b11846\"\r\n}",
+					"raw": "{\r\n    \"id\":\"65e0c06a59e665e19f43f3ad\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -409,6 +409,123 @@
 					"path": [
 						"api",
 						"delete-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDkyMjgwMDksImV4cCI6MTcwOTMxNDQwOX0.UJBDLO8pdx4Zaoy5TMptU9YyC-D58a8ZPX90e3zb9GI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"65e0c202b1fd1609981147cb\",\r\n    \"category_name\":\"PHP\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/update-category",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"update-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk0MDExNjYsImV4cCI6MTcwOTQ4NzU2Nn0.wns1PFQh_JG079A7usq0R6tdxUNt5qIN-RZxzoYVCOU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"How to build a dynamic web application using laravel\",\r\n    \"description\":\"Building a dynamic web application using Laravel involves several steps. Laravel is a popular PHP web application framework that follows the MVC (Model-View-Controller) architectural pattern. Here's a simplified explanation to get you started:\",\r\n    \"categories\": [\"65e0c04a59e665e19f43f3a7\", \"65e0c202b1fd1609981147cb\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/create-post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"create-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk0MDExNjYsImV4cCI6MTcwOTQ4NzU2Nn0.wns1PFQh_JG079A7usq0R6tdxUNt5qIN-RZxzoYVCOU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/get-posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"get-posts"
 					]
 				}
 			},

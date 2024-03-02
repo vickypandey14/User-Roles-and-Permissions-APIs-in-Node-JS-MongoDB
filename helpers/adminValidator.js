@@ -30,3 +30,13 @@ exports.createPostValidator = [
     check('title', 'The Post Title is required.').not().isEmpty(),
     check('description', 'The Post Description is required.').not().isEmpty(),
 ];
+
+exports.postDeleteValidator = [
+    check('id', 'The Post ID is required.').not().isEmpty(),
+];
+
+exports.updatePostValidator = [
+    check('id', 'The Post ID is required.').not().isEmpty(),
+    check('title', 'The Post Title is required.').not().isEmpty(),
+    check('description', 'The Post Description is required.').not().isEmpty(),
+];

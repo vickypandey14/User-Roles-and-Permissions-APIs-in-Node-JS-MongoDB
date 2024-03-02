@@ -54,7 +54,7 @@ const createPost = async(req, res) => {
 };
 
 
-// Get Post API Method
+// Get All Posts API Method
 
 const getPosts = async(req, res) => {
 
@@ -79,7 +79,23 @@ const getPosts = async(req, res) => {
 }
 
 
+// Delete Post By ID API Method
+
+const deletePost = async (req, res) => {
+
+};
+
+
+// Update Post Details API Method
+
+const updatePost = async (req, res) => {
+
+};
+
+
 module.exports = {
     createPost,
-    getPosts
+    getPosts,
+    deletePost,
+    updatePost
 };
