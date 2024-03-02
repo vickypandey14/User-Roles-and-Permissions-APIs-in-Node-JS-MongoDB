@@ -24,6 +24,7 @@ router.post('/update-category', auth, updateCategoryValidator, categoryControlle
 //  Post Routes
 
 router.post('/create-post', auth, createPostValidator, postController.createPost);
+router.get('/get-posts', auth, postController.getPosts);
 
 
 module.exports = router;
