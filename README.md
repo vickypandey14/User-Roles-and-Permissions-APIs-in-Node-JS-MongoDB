@@ -6,10 +6,10 @@ A simple repository for managing user roles and permissions through APIs using N
 
 ## Features
 
-- Role-based authentication
-- Permission management
-- API endpoints for user management
-- MongoDB integration for data storage and many more.
+- **Role-based Authentication:** Implement secure authentication based on user roles, ensuring that users have appropriate access levels.
+- **Permission Management:** Define and manage granular permissions to control user actions and access within the application.
+- **User Management API Endpoints:** Explore a variety of API endpoints for effective user management, allowing operations such as user creation, deletion, and retrieval.
+- **Post and Post Category:** A newly added feature includes post and post category management, expanding the functionality of the application.
 
 ## Getting Started
 
