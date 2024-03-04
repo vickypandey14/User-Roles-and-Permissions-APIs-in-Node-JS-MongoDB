@@ -83,12 +83,67 @@ const getPosts = async(req, res) => {
 
 const deletePost = async (req, res) => {
 
+    try {
+
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(200).json({
+                success: false,
+                msg: 'Validation Error',
+                errors: errors.array()
+            });
+        }
+
+        const { id } = req.body;
+
+        const isExists = await Post.findOne({ _id:id });
+
+        if (!isExists) {
+
+            return res.status(400).json({
+                success: false,
+                msg: "Post Not Found. Deletion aborted.",
+            });
+            
+        }
+
+        await Post.findByIdAndDelete({ _id:id });
+
+
+        return res.status(200).json({
+            success: true,
+            msg: 'Post successfully deleted!',
+        });
+
+        
+    } catch (error) 
+    {
+        return res.status(500).json({
+            success: false,
+            message: 'Internal Server Error. Unable to delete the post.',
+            error: error.message,
+        });
+    }
+
 };
 
 
 // Update Post Details API Method
 
 const updatePost = async (req, res) => {
+
+    try {
+
+
+        
+    } catch (error) 
+    {
+        return res.status(400).json({
+            success: false,
+            msg: error.message,
+        });
+    }
 
 };
 
