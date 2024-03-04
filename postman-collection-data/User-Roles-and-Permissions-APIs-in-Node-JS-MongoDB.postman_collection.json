@@ -530,6 +530,90 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Update Post Data By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk1NzEwNDMsImV4cCI6MTcwOTY1NzQ0M30.Va1Q-ozNAgdiAk2dfNbEHnP2iIo3iBVIeb0_0piFCdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65e369770ae3c89108e85dcb\",\r\n    \"title\":\"How to build a web application using laravel\",\r\n    \"description\":\"Building a dynamic web application using Laravel involves many steps. Laravel is a popular PHP web application framework that follows the MVC (Model-View-Controller) architectural pattern.\"\r\n    // \"categories\": [\"65e0c04a59e665e19f43f3a7\", \"65e0c202b1fd1609981147cb\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/update-post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"update-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk1NzEwNDMsImV4cCI6MTcwOTY1NzQ0M30.Va1Q-ozNAgdiAk2dfNbEHnP2iIo3iBVIeb0_0piFCdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65e367919135002c3f151ec4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/delete-post",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"delete-post"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
