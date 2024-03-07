@@ -614,6 +614,125 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Create New Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk4MzEzMzksImV4cCI6MTcwOTkxNzczOX0.0EZJZjFKdgXSAdDKwbgE3heoy_VmC22FqfTRBBvb_h4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_name\":\"editor\",\r\n    \"value\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/admin/store-role",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"store-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Roles By Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk4MzEzMzksImV4cCI6MTcwOTkxNzczOX0.0EZJZjFKdgXSAdDKwbgE3heoy_VmC22FqfTRBBvb_h4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/admin/get-roles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"get-roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk4MzEzMzksImV4cCI6MTcwOTkxNzczOX0.0EZJZjFKdgXSAdDKwbgE3heoy_VmC22FqfTRBBvb_h4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"\",\r\n    \"email\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/create-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"create-user"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
