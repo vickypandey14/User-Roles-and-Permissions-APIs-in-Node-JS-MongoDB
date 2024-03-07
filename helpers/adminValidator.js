@@ -40,3 +40,8 @@ exports.updatePostValidator = [
     check('title', 'The Post Title is required.').not().isEmpty(),
     check('description', 'The Post Description is required.').not().isEmpty(),
 ];
+
+exports.storeRoleValidator = [
+    check('role_name', 'The Role Name is required.').not().isEmpty(),
+    check('value', 'The Role Value is required.').not().isEmpty(),
+];

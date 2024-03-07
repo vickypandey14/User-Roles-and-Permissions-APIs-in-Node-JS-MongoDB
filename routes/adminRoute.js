@@ -9,7 +9,7 @@ const roleController = require('../controllers/admin/roleController');
 
 const { OnlyAdminCanAccess } = require('../middlewares/adminMiddleware');
 
-const { permissionAddValidator, permissionDeleteValidator, permissionUpdateValidator } = require('../helpers/adminValidator');
+const { permissionAddValidator, permissionDeleteValidator, permissionUpdateValidator, storeRoleValidator } = require('../helpers/adminValidator');
 
 // Authenticated Routes Starts Here (authorization token needed) -----------
 
@@ -23,7 +23,7 @@ router.post('/update-permission', auth, OnlyAdminCanAccess, permissionUpdateVali
 
 // Roles Routes
 
-router.post('/store-role', auth, OnlyAdminCanAccess, roleController.storeRole);
+router.post('/store-role', auth, OnlyAdminCanAccess, storeRoleValidator, roleController.storeRole);
 router.get('/get-roles', auth, OnlyAdminCanAccess, roleController.getRoles);
 
 
