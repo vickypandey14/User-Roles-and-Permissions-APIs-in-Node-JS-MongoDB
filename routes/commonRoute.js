@@ -5,9 +5,13 @@ const auth = require('../middlewares/authMiddleware');
 
 const { addCategoryValidator, categoryDeleteValidator, updateCategoryValidator, createPostValidator, postDeleteValidator, updatePostValidator } = require('../helpers/adminValidator');
 
+const { createUserValidator } = require('../helpers/userValidator');
+
 const categoryController = require('../controllers/categoryController');
 
 const postController = require('../controllers/postController');
+
+const userController = require('../controllers/userController');
 
 
 // Authenticated Routes Starts Here (Authorization token needed) -----------
@@ -27,6 +31,11 @@ router.post('/create-post', auth, createPostValidator, postController.createPost
 router.get('/get-posts', auth, postController.getPosts);
 router.post('/delete-post', auth, postDeleteValidator, postController.deletePost);
 router.post('/update-post', auth, updatePostValidator, postController.updatePost);
+
+
+// Users Routes
+
+router.post('/create-user', auth, createUserValidator, userController.createNewUser);
 
 
 module.exports = router;

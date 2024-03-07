@@ -60,5 +60,6 @@ Model, Controllers and Routes are setup for the Role API's Part
 
 07-03-2024:
 
-Store and Get Roles API for Admin API's Completed.
-Working on the create user API.
+Store and Get Roles API's for Admin Completed.
+Working on the create new user API.
+Installed Packages: npm i randomstring
