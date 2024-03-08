@@ -25,6 +25,11 @@ A simple repository for managing user roles and permissions through APIs using N
    cd User-Roles-and-Permissions-APIs-in-Node-JS-MongoDB
    npm install
    ```
+   
+### Create an `.env` file:
+
+Create an `.env` file based on the provided `.env.example`. This file should contain your sensitive information, such as database credentials and any other environment variables required. Ensure that the `.env` file is not committed to version control.
+
 
 3. Set up your MongoDB database and configure the connection in the project. Ensure that the MongoDB server is running and accessible. Modify the configuration files for database connection and environment variables.
 
