@@ -45,7 +45,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"12345678\"\r\n    // \"password\": CkMDyHeO // Sub Admin Password email: demo@gmail.com\r\n    // \"password\": D5hzkFjg // Editor Password email: editor@gmail.com\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -700,7 +700,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk4MzEzMzksImV4cCI6MTcwOTkxNzczOX0.0EZJZjFKdgXSAdDKwbgE3heoy_VmC22FqfTRBBvb_h4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDk4OTEzMzUsImV4cCI6MTcwOTk3NzczNX0.Xix3EIgEamQts8XIdcYGG7vlLRnOWRQiPJ5bVCZNTpk",
 							"type": "string"
 						}
 					]
@@ -709,7 +709,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"\",\r\n    \"email\":\"\"\r\n}",
+					"raw": "{\r\n    \"name\":\"editor\",\r\n    \"email\":\"editor@gmail.com\",\r\n    \"role\":3\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

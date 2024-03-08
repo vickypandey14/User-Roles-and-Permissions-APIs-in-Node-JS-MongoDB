@@ -63,3 +63,7 @@ Model, Controllers and Routes are setup for the Role API's Part
 Store and Get Roles API's for Admin Completed.
 Working on the create new user API.
 Installed Packages: npm i randomstring
+
+08-05-2024:
+
+Completed Create Users API. Implemented input validation, password hashing, and prevented admin user creation. Checks for existing emails. API provides clear error messages and returns user data upon successful creation.
