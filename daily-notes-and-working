@@ -67,4 +67,6 @@ Installed Packages: npm i randomstring
 08-05-2024:
 
 Completed Create Users API. Implemented input validation, password hashing, and prevented admin user creation. Checks for existing emails. API provides clear error messages and returns user data upon successful creation.
-- Working on Send Mail to User with their Details & Password Part
+
+- Worked completed on Send Mail to User with their Details & Password Part
+Installed Packages: npm i nodemailer (Nodemailer is an easy to use module to send e-mails with Node.JS)

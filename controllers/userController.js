@@ -5,6 +5,8 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const randomstring = require('randomstring');
 
+const { sendMail } = require('../helpers/mailer');
+
 const createNewUser = async(req, res) => {
 
     try {
@@ -58,6 +60,30 @@ const createNewUser = async(req, res) => {
         const userData = await newUser.save();
 
         console.log(password);
+
+        const content = `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 18px;">Hello ${userData.name},</p>
+                
+                <p style="font-size: 16px;">Welcome to ByteWebster! Your registration was successful, and your account is now active.</p>
+
+                <p style="font-size: 16px;">Here are your login details:</p>
+                
+                <ul style="list-style: none; padding: 0; font-size: 16px;">
+                    <li><strong>Email:</strong> ${userData.email}</li>
+                    <li><strong>Password:</strong> ${password}</li>
+                </ul>
+
+                <p style="font-size: 16px;">Keep this information secure and do not share it with anyone. If you have any questions or need assistance, feel free to contact our support team at <a href="mailto:support@example.com" style="color: #007BFF; text-decoration: none;">support@example.com</a>.</p>
+
+                <p style="font-size: 16px;">Thank you for choosing ByteWebster! We look forward to serving you.</p>
+
+                <p style="font-size: 16px;">Best regards,<br>
+                ByteWebster Team</p>
+            </div>
+        `;
+
+        sendMail(userData.email, 'Your registration was successful, and your account is now active.', content);
 
         return res.status(200).json({
             success: true,
