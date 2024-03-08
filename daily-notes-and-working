@@ -70,3 +70,11 @@ Completed Create Users API. Implemented input validation, password hashing, and 
 
 - Worked completed on Send Mail to User with their Details & Password Part
 Installed Packages: npm i nodemailer (Nodemailer is an easy to use module to send e-mails with Node.JS)
+
+"important note:" = Note that the mail sending functionality is currently disabled in the provided code due to the removal of Mailtrap credentials. To enable email sending, please replace the placeholder credentials in the mailer.js file with your valid Mailtrap or SMTP server credentials.
+Once the credentials are updated, the Send Mail functionality should work seamlessly.
+
+09-05-2024:
+
+Working on the Get Users and Update User API
+

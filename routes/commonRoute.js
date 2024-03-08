@@ -36,6 +36,7 @@ router.post('/update-post', auth, updatePostValidator, postController.updatePost
 // Users Routes
 
 router.post('/create-user', auth, createUserValidator, userController.createNewUser);
+router.get('/get-users', auth, userController.getUsers);
 
 
 module.exports = router;

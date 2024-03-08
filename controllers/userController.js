@@ -7,6 +7,9 @@ const randomstring = require('randomstring');
 
 const { sendMail } = require('../helpers/mailer');
 
+
+// Create New User API Method
+
 const createNewUser = async(req, res) => {
 
     try {
@@ -100,6 +103,25 @@ const createNewUser = async(req, res) => {
 
 }
 
+// Get All Users API Method
+
+const getUsers = async(req, res) => {
+
+    try {
+
+
+        
+    } catch (error) 
+    {
+        return res.status(400).json({
+            success: false,
+            msg: error.message,
+        });
+    }
+
+}
+
 module.exports = {
-    createNewUser
+    createNewUser,
+    getUsers
 }
