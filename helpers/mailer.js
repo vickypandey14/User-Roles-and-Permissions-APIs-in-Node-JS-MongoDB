@@ -15,7 +15,7 @@ const sendMail = async(email, subject, content) => {
     try {
 
         var mailOptions = {
-            from: "vivekpandeyrdj@gmail.com",
+            from: "your-mail-address@example.com",
             to: email,
             subject: subject,
             html: content
