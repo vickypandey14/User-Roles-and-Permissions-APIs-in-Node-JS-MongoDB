@@ -63,6 +63,7 @@ Model, Controllers and Routes are setup for the Role API's Part
 Store and Get Roles API's for Admin Completed.
 Working on the create new user API.
 Installed Packages: npm i randomstring
+The randomstring library is a useful tool for generating random strings in Node.js. 
 
 08-05-2024:
 
