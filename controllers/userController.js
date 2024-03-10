@@ -190,8 +190,17 @@ const updateUser = async(req, res) => {
 
 }
 
+// Delete User API Method
+
+const deleteUser = async(req, res) => {
+    
+
+    
+}
+
 module.exports = {
     createNewUser,
     getUsers,
-    updateUser
+    updateUser,
+    deleteUser
 }

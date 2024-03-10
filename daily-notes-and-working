@@ -79,3 +79,8 @@ Once the credentials are updated, the Send Mail functionality should work seamle
 
 Working on the Get Users and Update User API
 Get User API Route and methods are Created.
+
+11-05-2024:
+
+Update User Data By ID API Completed.
+Working on Delete User, Post like, UnLike, Like Count APIs.
