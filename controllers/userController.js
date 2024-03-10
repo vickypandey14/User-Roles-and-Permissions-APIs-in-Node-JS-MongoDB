@@ -116,6 +116,12 @@ const getUsers = async(req, res) => {
                 $ne: req.user._id
             }
         });
+
+        return res.status(200).json({
+            success: true,
+            msg: 'Users Data Fetched Successfully',
+            data: users
+        });
         
     } catch (error) 
     {
