@@ -7,3 +7,8 @@ exports.createUserValidator = [
     }),
 
 ];
+
+exports.updateUserValidator = [
+    check('id', 'The ID is required.').not().isEmpty(),
+    check('name', 'The Name is Required.').not().isEmpty(),
+];

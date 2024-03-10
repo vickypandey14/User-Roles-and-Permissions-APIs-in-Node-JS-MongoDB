@@ -109,9 +109,9 @@ const getUsers = async(req, res) => {
 
     try {
 
-        console.log(req.user._id);
+        // console.log(req.user._id);
 
-        const users = User.find({
+        const users = await User.find({
             _id: {
                 $ne: req.user._id
             }
@@ -133,7 +133,65 @@ const getUsers = async(req, res) => {
 
 }
 
+// Update User Data API Method
+
+const updateUser = async(req, res) => {
+
+    try {
+
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.status(400).json({
+                success: false,
+                msg: 'Errors',
+                errors: errors.array()
+            });
+        }
+
+        const { id, name } = req.body;
+
+        const isExists = await User.findOne({
+            _id: id
+        });
+
+        if (!isExists) {
+            return res.status(400).json({
+                success: false,
+                msg: 'Sorry, This user does not exist!'
+            });
+        }
+
+        var updateObj = {
+            name
+        }
+
+        if (req.body.role != undefined) {
+            updateObj.role = req.body.role;
+        }
+
+        const userUpdatedData = await User.findByIdAndUpdate({ _id:id },{
+            $set: updateObj
+        }, { new:true });
+
+        return res.status(200).json({
+            success: true,
+            msg: 'User Data Updated Successfully!',
+            data: userUpdatedData
+        });
+        
+    } catch (error) 
+    {
+        return res.status(400).json({
+            success: false,
+            msg: error.message,
+        });
+    }
+
+}
+
 module.exports = {
     createNewUser,
-    getUsers
+    getUsers,
+    updateUser
 }
