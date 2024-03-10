@@ -109,7 +109,13 @@ const getUsers = async(req, res) => {
 
     try {
 
+        console.log(req.user._id);
 
+        const users = User.find({
+            _id: {
+                $ne: req.user._id
+            }
+        });
         
     } catch (error) 
     {
