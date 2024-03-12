@@ -7,11 +7,16 @@ const { addCategoryValidator, categoryDeleteValidator, updateCategoryValidator, 
 
 const { createUserValidator, updateUserValidator, deleteUserValidator } = require('../helpers/userValidator');
 
+const { postLikeAndUnlikeValidator } = require('../helpers/postValidator');
+
+
 const categoryController = require('../controllers/categoryController');
 
 const postController = require('../controllers/postController');
 
 const userController = require('../controllers/userController');
+
+const likeController = require('../controllers/likeController');
 
 
 // Authenticated Routes Starts Here (Authorization token needed) -----------
@@ -39,5 +44,12 @@ router.post('/create-user', auth, createUserValidator, userController.createNewU
 router.get('/get-users', auth, userController.getUsers);
 router.post('/update-user', auth, updateUserValidator, userController.updateUser);
 router.post('/delete-user', auth, deleteUserValidator, userController.deleteUser);
+
+
+// Like and Unlike API Routes
+
+router.post('/post-like', auth, postLikeAndUnlikeValidator, likeController.postLike);
+router.post('/post-unlike', auth, postLikeAndUnlikeValidator, likeController.postUnlike);
+
 
 module.exports = router;
