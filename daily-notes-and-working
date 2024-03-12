@@ -88,4 +88,5 @@ Working on Delete User, Post like, UnLike, Like Count APIs.
 12-05-2024:
 
 Work completed in Delete User API.
-Post Like API is Completed (New validator file (postValidator.js) is created, new controller is created (likeController.js).)
+Post Like API is Completed (New validator file (postValidator.js) is created, new controller is created (likeController.js)).
+Post Unlike and Post Like Count API is completed (Changes in commonRoutes.js File, postValidator.js file, and likeController File).

@@ -7,7 +7,7 @@ const { addCategoryValidator, categoryDeleteValidator, updateCategoryValidator, 
 
 const { createUserValidator, updateUserValidator, deleteUserValidator } = require('../helpers/userValidator');
 
-const { postLikeAndUnlikeValidator } = require('../helpers/postValidator');
+const { postLikeAndUnlikeValidator, postLikeCountValidator } = require('../helpers/postValidator');
 
 
 const categoryController = require('../controllers/categoryController');
@@ -50,6 +50,6 @@ router.post('/delete-user', auth, deleteUserValidator, userController.deleteUser
 
 router.post('/post-like', auth, postLikeAndUnlikeValidator, likeController.postLike);
 router.post('/post-unlike', auth, postLikeAndUnlikeValidator, likeController.postUnlike);
-
+router.post('/post-like-count', auth, postLikeCountValidator, likeController.postLikeCount);
 
 module.exports = router;
