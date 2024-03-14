@@ -5,8 +5,8 @@ const { validationResult } = require('express-validator');
 
 // Add New Permissions API Method
 
-const addPermission = async(req, res) => {
-
+const addPermission = async (req, res) => {
+    
     try {
 
         const errors = validationResult(req);
@@ -21,10 +21,10 @@ const addPermission = async(req, res) => {
 
         const { permission_name } = req.body;
 
-        const isExists = await Permission.findOne({ 
-            permission_name:{
-                $regax: permission_name,
-                $option:'i'
+        const isExists = await Permission.findOne({
+            permission_name: {
+                $regex: permission_name,
+                $options: 'i'
             }
         });
 
@@ -35,15 +35,15 @@ const addPermission = async(req, res) => {
             });
         }
 
-        var obj = {
+        const obj = {
             permission_name
-        }
+        };
 
         if (req.body.default) {
             obj.is_default = parseInt(req.body.default);
         }
 
-        const permission = new Permission( obj );
+        const permission = new Permission(obj);
         const newPermission = await permission.save();
 
         return res.status(200).json({
@@ -51,17 +51,18 @@ const addPermission = async(req, res) => {
             msg: 'New Permission Created Successfully!',
             data: newPermission
         });
-
     } 
-    catch (error) 
-    {
+    catch (error) {
         return res.status(400).json({
             success: false,
             msg: error.message,
         });
     }
+};
 
-}
+module.exports = {
+    addPermission
+};
 
 // Get Permissions API Method
 
