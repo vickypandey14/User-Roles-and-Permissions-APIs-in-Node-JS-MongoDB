@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"raw": "{\r\n    \"name\":\"vivek pandey 123\",\r\n    \"email\":\"vivek123@xyz.com\",\r\n    \"password\":\"12345678\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -130,7 +130,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MDg3MDY3ODcsImV4cCI6MTcwODc5MzE4N30.JHrd3CWwmZhC9pxEDpBca0xYUVshRTCeO3broLD8DTc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MTA0MzM1MjAsImV4cCI6MTcxMDUxOTkyMH0.2juqFu8WusdxXBElqazo_sr-v1WnKAScbq02Js5Al1I",
 							"type": "string"
 						}
 					]
@@ -139,7 +139,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"permission_name\":\"comment\",\r\n    \"default\":1\r\n}",
+					"raw": "{\r\n    \"permission_name\":\"like\",\r\n    \"default\":1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -742,7 +742,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MTAwOTUwOTEsImV4cCI6MTcxMDE4MTQ5MX0.fh-dKtgCn4_7ati6iM-bMhg9_RVXkOMDeDster6zB84",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1ZDM0N2M0ZmNlN2FjNDkwYTA3ZDZjOCIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTUkVUdhVUhXcGdTUlQzV2M1YS5Bb1FOZUlJUUpTam1zdWNIWFg0VnQ5UW5YaGZucU1GOTdGRXUiLCJyb2xlIjoxLCJfX3YiOjB9LCJpYXQiOjE3MTA0NDAyMjQsImV4cCI6MTcxMDUyNjYyNH0.oH9QVJyfVtuZ3DPoLlS8uVIeWzuibu92fgVkHm_4y8s",
 							"type": "string"
 						}
 					]
