@@ -6,6 +6,13 @@ const bcrypt = require('bcrypt');
 
 const jwt = require('jsonwebtoken');
 
+const Permission = require('../models/permissionModel');
+
+const UserPermission = require('../models/userPermissionModel');
+
+
+// Register New User API Method
+
 const registerUser = async(req, res) => {
 
     try {
@@ -41,11 +48,40 @@ const registerUser = async(req, res) => {
 
         const userData = await user.save();
 
+        // Assigning the Default Permissions to created User
+
+        const defaultPermissions = await Permission.find({
+            is_default: 1
+        });
+
+        if (defaultPermissions.length > 0) {
+
+            const PermissionArray = [];
+
+            defaultPermissions.forEach(permission => {
+
+                PermissionArray.push({
+                    permission_name:permission.permission_name,
+                    permission_value:[0,1,2,3]
+                });
+
+            });
+
+            const userPermission = new UserPermission({
+                user_id:userData._id,
+                permissions:PermissionArray
+            });
+
+            await userPermission.save();
+
+        }
+
         return res.status(200).json({
             success: true,
             msg: 'User Registered Successfully!',
             data: userData
         });
+        
     } 
     catch (error) {
         return res.status(400).json({
@@ -62,6 +98,8 @@ const generateAccessToken = async(user) => {
     const token = jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, { expiresIn:"24h" });
     return token;
 }
+
+// Login User API Method
 
 const loginUser = async(req, res) => {
 
@@ -116,6 +154,9 @@ const loginUser = async(req, res) => {
     }
 
 }
+
+// Get User Profile Method API
+
 
 const getProfile = async(req, res) => {
 
