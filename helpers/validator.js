@@ -6,7 +6,6 @@ exports.registerValidator = [
         gmail_remove_dots:true
     }),
     check('password', 'Password is Required.').not().isEmpty(),
-
 ];
 
 exports.loginValidator = [
@@ -14,5 +13,9 @@ exports.loginValidator = [
         gmail_remove_dots:true
     }),
     check('password', 'Password is Required.').not().isEmpty(),
+];
 
+exports.updateProfileValidator = [
+    check('name', 'Name is Required.').optional().not().isEmpty(),
+    check('password', 'Password must be at least 6 characters long.').optional().isLength({ min: 6 }),
 ];
