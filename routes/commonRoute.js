@@ -3,12 +3,11 @@ const router = express();
 
 const auth = require('../middlewares/authMiddleware');
 
-const { addCategoryValidator, categoryDeleteValidator, updateCategoryValidator, createPostValidator, postDeleteValidator, updatePostValidator } = require('../helpers/adminValidator');
+const { addCategoryValidator, categoryDeleteValidator, updateCategoryValidator, createPostValidator, postDeleteValidator, updatePostValidator, getPostByIdValidator, getPostsByCategoryValidator, getUserPostsValidator } = require('../helpers/adminValidator');
 
 const { createUserValidator, updateUserValidator, deleteUserValidator } = require('../helpers/userValidator');
 
 const { postLikeAndUnlikeValidator, postLikeCountValidator } = require('../helpers/postValidator');
-
 
 const categoryController = require('../controllers/categoryController');
 
@@ -18,9 +17,7 @@ const userController = require('../controllers/userController');
 
 const likeController = require('../controllers/likeController');
 
-
 // Authenticated Routes Starts Here (Authorization token needed) -----------
-
 
 // Category Routes
 
@@ -29,14 +26,15 @@ router.get('/get-categories', auth, categoryController.getCategories);
 router.post('/delete-category', auth, categoryDeleteValidator, categoryController.deleteCategory);
 router.post('/update-category', auth, updateCategoryValidator, categoryController.updateCategory);
 
-
-//  Post Routes
+// Post Routes
 
 router.post('/create-post', auth, createPostValidator, postController.createPost);
 router.get('/get-posts', auth, postController.getPosts);
 router.post('/delete-post', auth, postDeleteValidator, postController.deletePost);
 router.post('/update-post', auth, updatePostValidator, postController.updatePost);
-
+router.get('/get-post/:id', auth, getPostByIdValidator, postController.getPostById);
+router.get('/get-posts/category/:categoryId', auth, getPostsByCategoryValidator, postController.getPostsByCategory);
+router.get('/get-posts/user/:userId', auth, getUserPostsValidator, postController.getUserPosts);
 
 // Users Routes
 
@@ -44,7 +42,6 @@ router.post('/create-user', auth, createUserValidator, userController.createNewU
 router.get('/get-users', auth, userController.getUsers);
 router.post('/update-user', auth, updateUserValidator, userController.updateUser);
 router.post('/delete-user', auth, deleteUserValidator, userController.deleteUser);
-
 
 // Like and Unlike API Routes
 
